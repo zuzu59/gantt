@@ -28,14 +28,14 @@
 	<script>
 		var tasks = [
 			{
-				start: '2021-7-20',
-				end: '2021-7-22',
+				start: '2021-7-20 -4:0',
+				end: '2021-7-22 6:0',
 				name: 'Ecriture du CDC',
 				id: "Task 0",
 				progress: 20
 			},
 			{
-				start: '2021-7-22',
+				start: '2021-7-22 -4:0',
 				end: '2021-7-27',
 				name: 'afficher tous les commits',
 				id: "Task 1",
@@ -43,7 +43,7 @@
 				dependencies: 'Task 0'
 			},
 			{
-				start: '2021-7-27',
+				start: '2021-7-27 -4:0',
 				end: '2021-7-29',
 				name: 'créer la page web',
 				id: "Task 2",
@@ -51,7 +51,7 @@
 				dependencies: 'Task 1'
 			},
 			{
-				start: '2021-7-29',
+				start: '2021-7-29 -4:0',
 				end: '2021-8-5',
 				name: 'trier les commits',
 				id: "Task 3",
@@ -59,7 +59,7 @@
 				dependencies: 'Task 2'
 			},
 			{
-				start: '2021-8-5',
+				start: '2021-8-5 -4:0',
 				end: '2021-8-7',
 				name: 'système de paramétrage',
 				id: "Task 4",
@@ -67,7 +67,7 @@
 				dependencies: 'Task 3'
 			},
 			{
-				start: '2021-8-7',
+				start: '2021-8-7 -4:0',
 				end: '2021-8-8',
 				name: 'rendu final',
 				id: "Task 5",
@@ -89,8 +89,27 @@
 			on_view_change: function(mode) {
 				console.log(mode);
 			},
-			view_mode: 'Day',
-			language: 'en'
+			// view_mode: 'Day',
+			// language: 'en'
+			
+			header_height: 50,
+			column_width: 30,
+			step: 24,
+			view_modes: ['Quarter Day', 'Half Day', 'Day', 'Week', 'Month'],
+			bar_height: 20,
+			bar_corner_radius: 3,
+			arrow_curve: 5,
+			padding: 18,
+			view_mode: 'Half Day',   
+			date_format: 'YYYY-MM-DD HH:mm:ss.SSS',
+			language: 'fr',
+			custom_popup_html: null
+
+			
+			
+			
+			
+			
 		});
 		console.log(gantt_chart);
 	</script>
